@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Students</title>
+</head>
+<body>
+    <h2>Список студентов</h2>
+    <a href="http://127.0.0.1:8000/create_many/">Добавление студента</a>
+    <table>
+        <thead><th>Имя</th><th>Курсы</th></thead>
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>
+                {% for course in student.courses.all %}
+                    {{ course.name }}
+                {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
